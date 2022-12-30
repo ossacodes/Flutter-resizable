@@ -11,6 +11,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Text Overflow Demo',
+      debugShowMaterialGrid: false,
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -33,13 +35,14 @@ class _DemoState extends State<Demo> {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.blueGrey[900],
-      padding: const EdgeInsets.all(60),
-      child: ResizebleWidget(
-        child: const Text(
-          '''I've just did simple prototype to show main idea.
+      child: Center(
+        child: ResizebleWidget(
+          child: const Text(
+            '''I've just did simple prototype to show main idea.
   1. Draw size handlers with container;
   2. Use GestureDetector to get new variables of sizes
   3. Refresh the main container size.''',
+          ),
         ),
       ),
     );
@@ -85,7 +88,7 @@ class _ResizebleWidgetState extends State<ResizebleWidget> {
             width: width,
             color: Colors.red[100],
             child: Image.network(
-              'https://images.unsplash.com/photo-1648737119359-510d4f551382?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHw0Nnx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60',
+              'https://images.unsplash.com/photo-1672184158639-def9f82f6a4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
               fit: BoxFit.cover,
             ),
           ),
